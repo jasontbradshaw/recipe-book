@@ -11,7 +11,7 @@
       "name": "flour tortillas",
       "measure": {
         "type": "count",
-        "value": [12, 15]
+        "value": 15
       }
     },
     {
@@ -132,7 +132,7 @@
         "type": "count",
         "value": 1
       }
-    },
+    }
   ],
 
   "directions": [
@@ -148,7 +148,7 @@
     },
     {
       "parallelizable": true,
-      "text": "Rinse and drain the black beans."
+      "text": "Rinse and drain the black beans.",
       "uses": ["beans"]
     },
     {
@@ -178,7 +178,7 @@
     {
       "text": "Bake at 350 degrees for 45 minutes. If you like softer cheese, cover the pan with foil. Leave it uncovered for a crispier top.",
       "uses": ["tortillas", "grated-cheese", "half-and-half"]
-    },
+    }
   ],
 
   "notes": ["For a great side dish add a bit of the filling to a can of corn, add some hot sauce or chopped chipotle peppers, then heat and serve."]
