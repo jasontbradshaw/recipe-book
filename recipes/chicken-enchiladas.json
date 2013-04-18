@@ -1,0 +1,185 @@
+{
+  "name": "Vegetarian Enchiladas",
+  "preparation_time_minutes": 45,
+  "number_served": 8,
+
+  "description": "A relatively healthy (and entirely delicious) take on classic enchiladas.",
+
+  "ingredients": [
+    {
+      "id": "tortillas",
+      "name": "flour tortillas",
+      "measure": {
+        "type": "count",
+        "value": [12, 15]
+      }
+    },
+    {
+      "id": "green-chiles",
+      "name": "green chilies (canned and chopped)",
+      "measure": {
+        "type": "ounce",
+        "value": 8
+      }
+    },
+    {
+      "id": "fajita-seasoning",
+      "name": "fajita seasoning"
+    },
+    {
+      "id": "cooking-spray",
+      "name": "cooking spray"
+    },
+    {
+      "id": "black-pepper",
+      "name": "black pepper"
+    },
+    {
+      "id": "olive-oil",
+      "name": "olive oil",
+      "measure": {
+        "type": "tablespoon",
+        "value": 1
+      }
+    },
+    {
+      "id": "half-and-half",
+      "name": "half-and-half",
+      "measure": {
+        "type": "pint",
+        "value": 1
+      }
+    },
+    {
+      "id": "onion",
+      "name": "yellow onion",
+      "measure": {
+        "type": "description",
+        "value": "medium"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "garlic",
+      "measure": {
+        "type": "count",
+        "name": "clove",
+        "value": 2
+      }
+    },
+    {
+      "id": "cream-cheese",
+      "name": "cream cheese (light)",
+      "measure": {
+        "type": "ounce",
+        "value": 8
+      }
+    },
+    {
+      "id": "grated-cheese",
+      "name": "Mexican-blend cheese",
+      "measure": {
+        "type": "ounce",
+        "value": 16
+      }
+    },
+    {
+      "id": "red-pepper",
+      "name": "red pepper",
+      "measure": {
+        "type": "count",
+        "value": 1
+      }
+    },
+    {
+      "id": "green-pepper",
+      "name": "green pepper",
+      "measure": {
+        "type": "count",
+        "value": 1
+      }
+    },
+    {
+      "id": "broccoli",
+      "name": "broccoli",
+      "measure": {
+        "type": "count",
+        "value": 1
+      }
+    },
+    {
+      "id": "corn",
+      "name": "corn",
+      "measure": {
+        "type": "count",
+        "name": "ear",
+        "value": 2
+      }
+    },
+    {
+      "id": "beans",
+      "name": "black beans",
+      "measure": {
+        "type": "count",
+        "name": "can",
+        "value": 1
+      }
+    },
+    {
+      "id": "jalepeno",
+      "name": "jalepeño pepper",
+      "measure": {
+        "type": "count",
+        "value": 1
+      }
+    },
+  ],
+
+  "directions": [
+    {
+      "parallelizable": true,
+      "text": "Bring water to a boil, then add the corn. Once the corn is done, boil the broccoli in the same water. Once cooked, cut the corn off the cob and chop the broccoli.",
+      "uses": ["corn", "broccoli"]
+    },
+    {
+      "parallelizable": true,
+      "text": "Chop the onion, then start sautèing them in a large pan with some olive oil over medium-high heat. This pan will eventually hold all the ingredients, so make sure the it's large enough!",
+      "uses": ["olive-oil", "onion"]
+    },
+    {
+      "parallelizable": true,
+      "text": "Rinse and drain the black beans."
+      "uses": ["beans"]
+    },
+    {
+      "text": "Chop the jalepeño, the red and green bell peppers, and the garlic. De-seed the jalepeño unless you like your enchiladas spicy. Once the onions have had some time to sautè, add all the vegetables to the pan and sautè until tender.",
+      "uses": ["jalepeno", "red-pepper", "green-pepper", "garlic"]
+    },
+    {
+      "text": "Add the green chiles and let cook for a minute.",
+      "uses": ["green-chiles"]
+    },
+    {
+      "text": "Add the cream cheese and stir until melted.",
+      "uses": ["cream-cheese"]
+    },
+    {
+      "text": "Add the broccoli, beans, and corn, stirring to combine and heat.",
+      "uses": ["broccoli", "beans", "corn"]
+    },
+    {
+      "text": "Grease an 8\" x 11\" baking dish. This will hold the enchiladas.",
+      "uses": ["cooking-spray"]
+    },
+    {
+      "text": "Fill the tortillas with the mixture, and line the pan with them. Don't be afraid to squash them together a bit to make them all fit! Once the pan is full, cover it in the Mexican-blend cheese, then pour the half-and-half over everything.",
+      "uses": ["tortillas", "grated-cheese", "half-and-half"]
+    },
+    {
+      "text": "Bake at 350 degrees for 45 minutes. If you like softer cheese, cover the pan with foil. Leave it uncovered for a crispier top.",
+      "uses": ["tortillas", "grated-cheese", "half-and-half"]
+    },
+  ],
+
+  "notes": ["For a great side dish add a bit of the filling to a can of corn, add some hot sauce or chopped chipotle peppers, then heat and serve."]
+}
