@@ -1,1 +1,50 @@
 @import 'nib'
+
+// THEME
+$color-header-text = #383428
+$size-content-width = 720px
+$font-header = 'Great Vibes', serif
+$font-normal = 'Open Sans', Helvetica, Arial, sans-serif
+
+// STYLES
+h1, h2, h3, h4, h5, h6
+  font-family $font-header
+  padding 0.1em
+  color $color-header-text
+
+h1
+  font-size 120px
+
+html
+  background url(../img/paper.jpg)
+  width 100%
+  height @width
+  font-family $font-normal
+  font-weight 300
+
+#main
+  text-align center
+
+  header
+    margin-top 120px
+
+  input
+    font-size 22px
+    font-family inherit
+    text-align center
+
+    padding 0.3em
+    width 18em
+
+    border-radius 2em
+
+    border none
+    background-color rgba(white, 0.8)
+    box-shadow 0 0 10px rgba(black, 0.3)
+
+    transition-property background-color
+    transition-duration 250ms
+
+    &:focus
+      background-color white
+      outline none
