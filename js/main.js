@@ -1,13 +1,7 @@
-define(['jquery'], function ($) {
-  // download and parse a recipe from this website
-  var getRecipe = function (name) {
-    return $.getJSON('/recipes/' + name + '.json').fail(function (xhr, err) {
-      console.error(err);
-    });
-  };
+define([
+  'jquery',
+  'recipes',
+  'm!templates/recipe.html'
+], function ($, recipes, tmplRecipe) {
 
-  // collet all the recipes
-  getRecipe('chicken-enchiladas').done(function (recipe) {
-    console.log(recipe);
-  });
 });
