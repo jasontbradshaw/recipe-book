@@ -1,1 +1,40 @@
-<p>Hello, {{thing}}!</p>
+<article class="recipe">
+
+  <header>
+    <h1>{{title}}</h1>
+    <div class="stats">
+      <p class="serves">Serves <span class="number-served">{{number_served}}</span></p>
+      <p class="prep-time">Takes
+        <span class="minutes">{{preparation_time_minutes}}</span>
+        <span class="time-word">minutes</span>
+        to make
+      </p>
+    </div>
+  </header>
+
+  <ul class="ingredients">
+    {{#ingredients}}
+    <li class="ingredient {{#optional}}optional{{/optional}}" data-id="{{id}}"
+        data-measure-type="{{measure.type}}"
+        data-measure-value="{{measure.value}}">
+      {{name}} <span class="measure"></span>
+    </li>
+    {{/ingredients}}
+  </ul>
+
+  <section class="directions">
+    {{#directions}}
+    <div class="direction {{#parallelizable}}parallelizable{{/parallelizable}}"
+        data-ingredient-ids="{{#ingredient-ids}}{{.}},{{/ingredient-ids}}">
+      {{text}}
+    </div>
+    {{/directions}}
+  </section>
+
+  <section class="notes">
+    {{#notes}}
+    <p>{{.}}</p>
+    {{/notes}}
+  </section>
+
+</article>

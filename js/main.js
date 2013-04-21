@@ -1,7 +1,9 @@
 define([
   'jquery',
+  'vendor/inflection',
   'recipes',
   'm!templates/recipe.html'
-], function ($, recipes, tmplRecipe) {
+], function ($, inflection, recipes, tmplRecipe) {
 
+  $('#content').append(tmplRecipe(recipes[0]));
 });
