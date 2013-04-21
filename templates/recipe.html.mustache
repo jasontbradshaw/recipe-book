@@ -3,38 +3,44 @@
   <header>
     <h1>{{title}}</h1>
     <div class="stats">
-      <p class="serves">Serves <span class="number-served">{{number_served}}</span></p>
-      <p class="prep-time">Takes
-        <span class="minutes">{{preparation_time_minutes}}</span>
-        <span class="time-word">minutes</span>
-        to make
-      </p>
+      <span class="serves">Serves <span class="special number-served">{{number_served}}</span></span>
+      <span class="prep-time">
+        Takes
+        <span class="special minutes">{{preparation_time_minutes}}</span>
+        <span class="special time-word">minutes</span>
+      </span>
     </div>
   </header>
-
-  <ul class="ingredients">
-    {{#ingredients}}
-    <li class="ingredient {{#optional}}optional{{/optional}}" data-id="{{id}}"
-        data-measure-type="{{measure.type}}"
-        data-measure-value="{{measure.value}}">
-      {{name}} <span class="measure"></span>
-    </li>
-    {{/ingredients}}
-  </ul>
-
-  <section class="directions">
-    {{#directions}}
-    <div class="direction {{#parallelizable}}parallelizable{{/parallelizable}}"
-        data-ingredient-ids="{{#ingredient-ids}}{{.}},{{/ingredient-ids}}">
-      {{text}}
-    </div>
-    {{/directions}}
-  </section>
 
   <section class="notes">
     {{#notes}}
     <p>{{.}}</p>
     {{/notes}}
+  </section>
+
+  <section class="main">
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        {{#ingredients}}
+        <li class="ingredient {{#optional}}optional{{/optional}}" data-id="{{id}}"
+            data-measure-type="{{measure.type}}"
+            data-measure-value="{{measure.value}}">
+          {{name}} <span class="measure"></span>
+        </li>
+        {{/ingredients}}
+      </ul>
+    </section>
+
+    <section class="directions">
+      <h2>Directions</h2>
+      {{#directions}}
+      <div class="direction {{#parallelizable}}parallelizable{{/parallelizable}}"
+          data-ingredient-ids="{{#ingredient-ids}}{{.}},{{/ingredient-ids}}">
+        {{text}}
+      </div>
+      {{/directions}}
+    </section>
   </section>
 
 </article>

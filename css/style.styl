@@ -1,29 +1,46 @@
 @import 'nib'
 
+// COLOR SCHEME
+$color-1 = #4d8b4d
+$color-2 = #fcc240
+$color-3 = #bf4b31
+$color-4 = #4b3929
+$color-5 = lighten(#ced6b4, 80%)
+
 // THEME
-$color-header-text = #383428
-$size-content-width = 720px
-$font-header = 'Great Vibes', serif
+$color-header-text = $color-3
+$color-background = $color-5
+$color-special = $color-1
+
+$font-fancy = 'Great Vibes', serif
 $font-normal = 'Open Sans', Helvetica, Arial, sans-serif
+
+$size-content-width = 910px
+$size-ingredients-width = 35%
 
 *
   box-sizing border-box
 
 // STYLES
 h1, h2, h3, h4, h5, h6
-  font-family $font-header
-  padding 0.1em
+  font-family $font-normal
+  font-weight 600
   color $color-header-text
 
-h1
-  font-size 120px
-
 html
-  background url(../img/paper.jpg)
+  background-color $color-background
   width 100%
   height @width
   font-family $font-normal
-  font-weight 300
+
+.special
+  color $color-special
+  font-weight bold
+
+#content
+  width $size-content-width
+  margin-left auto
+  margin-right @margin-left
 
 #search
   // TODO: implement search
@@ -33,6 +50,11 @@ html
   position absolute
   top 50%
   left 50%
+
+  h1
+    font-family $font-fancy
+    font-size 120px
+    padding 0.1em
 
   header
     height 200px
@@ -61,3 +83,48 @@ html
     &:focus
       background-color white
       outline none
+
+.recipe
+  padding 0.5em
+  font-size 18px
+
+  .serves:after
+    content ','
+
+  header
+    margin-bottom 20px
+
+  .notes:not(:empty)
+    margin-bottom 20px
+
+  h1
+    font-size 50px
+    margin-bottom 10px
+
+  .main
+    clearfix()
+
+  .ingredients
+  .directions
+    float left
+
+    h2
+      margin-bottom 8px
+      font-size 22px
+
+  .ingredients
+    width $size-ingredients-width
+    ul
+      list-style-type none
+
+    li ~ li
+      margin-top 5px
+
+
+  .directions
+    width 100% - $size-ingredients-width
+    padding-left 10px
+
+    .direction
+      &~ .direction
+        margin-top 1em
