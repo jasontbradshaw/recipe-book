@@ -15,7 +15,7 @@ define(['jquery'], function ($) {
     }).done(function (data, status, xhr) {
       var json = {};
       try {
-        json = $.parseJSON(data);
+        json = JSON.parse(data);
       } catch (e) {
         console.error('failed to parse JSON from: ' + name);
         console.error(e);
