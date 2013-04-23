@@ -16,7 +16,7 @@ input,select{vertical-align:middle}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans',Helvetica,Arial,sans-serif;font-weight:600;color:#bf4b31}
 html{background-color:#f5f7f0;width:100%;height:100%;font-family:'Open Sans',Helvetica,Arial,sans-serif}
 .special{color:#4d8b4d;font-weight:bold}
-#content{width:910px;margin-left:auto;margin-right:auto}
+#content{width:720px;margin-left:auto;margin-right:auto}
 #search{display:none;text-align:center;position:absolute;top:50%;left:50%;}
 #search h1{font-family:'Great Vibes',serif;font-size:120px;padding:.1em}
 #search header{height:200px;width:450px;margin-top:-100px;margin-left:-225px}
@@ -25,7 +25,9 @@ html{background-color:#f5f7f0;width:100%;height:100%;font-family:'Open Sans',Hel
 .recipe{padding:.5em;font-size:18px;}
 .recipe .serves:after{content:','}
 .recipe header{margin-bottom:20px}
-.recipe .notes:not(:empty){margin-bottom:20px}
+.recipe .notes p{text-align:justify;line-height:1.2em;}
+.recipe .notes p~ p{margin-top:1em}
+.recipe .notes p:last-child{margin-bottom:1em}
 .recipe h1{font-size:50px;margin-bottom:10px}
 .recipe .main{zoom:1}
 .recipe .main:before,.recipe .main:after{content:"";display:table}
@@ -34,6 +36,10 @@ html{background-color:#f5f7f0;width:100%;height:100%;font-family:'Open Sans',Hel
 .recipe .ingredients h2,.recipe .directions h2{margin-bottom:8px;font-size:22px}
 .recipe .ingredients{width:35%;}
 .recipe .ingredients ul{list-style-type:none}
-.recipe .ingredients li ~ li{margin-top:5px}
-.recipe .directions{width:65%;padding-left:10px;}
-.recipe .directions .direction~ .direction{margin-top:1em}
+.recipe .ingredient{-webkit-transition-property:background-color;-moz-transition-property:background-color;-o-transition-property:background-color;-ms-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:150ms;-moz-transition-duration:150ms;-o-transition-duration:150ms;-ms-transition-duration:150ms;transition-duration:150ms;padding:.3em;margin-left:-.3em;-webkit-border-radius:8px;border-radius:8px;cursor:pointer;}
+.recipe .ingredient .optional{display:none;color:#a6a6a6;font-style:italic}
+.recipe .ingredient.optional .optional{display:inline}
+.recipe .ingredient:hover{background-color:#feedc6}
+.recipe .directions{width:65%;padding-left:10px}
+.recipe .direction{text-align:justify;line-height:1.2em;}
+.recipe .direction~ .direction{margin-top:1em}

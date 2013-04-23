@@ -5,17 +5,19 @@ $color-1 = #4d8b4d
 $color-2 = #fcc240
 $color-3 = #bf4b31
 $color-4 = #4b3929
-$color-5 = lighten(#ced6b4, 80%)
+$color-5 = #ced6b4
 
 // THEME
 $color-header-text = $color-3
-$color-background = $color-5
+$color-background = lighten($color-5, 80%)
+$color-highlight = lighten($color-2, 70%)
 $color-special = $color-1
+$color-text = black
 
 $font-fancy = 'Great Vibes', serif
 $font-normal = 'Open Sans', Helvetica, Arial, sans-serif
 
-$size-content-width = 910px
+$size-content-width = 720px
 $size-ingredients-width = 35%
 
 *
@@ -94,8 +96,15 @@ html
   header
     margin-bottom 20px
 
-  .notes:not(:empty)
-    margin-bottom 20px
+  .notes
+    p
+      text-align justify
+      line-height 1.2em
+
+      &~ p
+        margin-top 1em
+      &:last-child
+        margin-bottom 1em
 
   h1
     font-size 50px
@@ -117,14 +126,38 @@ html
     ul
       list-style-type none
 
-    li ~ li
-      margin-top 5px
+  .ingredient
 
+    transition-property background-color
+    transition-duration 150ms
+
+    padding 0.3em
+    margin-left -(@padding)
+
+    border-radius 8px
+
+    cursor pointer
+
+    .optional
+      // hidden unless the ingredient is optional
+      display none
+
+      color lighten($color-text, 65%)
+      font-style italic
+
+    &.optional .optional
+      display inline
+
+    &:hover
+      background-color $color-highlight
 
   .directions
     width 100% - $size-ingredients-width
     padding-left 10px
 
-    .direction
-      &~ .direction
-        margin-top 1em
+  .direction
+    text-align justify
+    line-height 1.2em
+
+    &~ .direction
+      margin-top 1em

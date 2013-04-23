@@ -15,7 +15,7 @@
     },
     {
       "id": "green-chiles",
-      "name": "green chilies (canned and chopped)",
+      "name": "green chilies, canned and chopped",
       "measure": {
         "type": "ounce",
         "value": 8
@@ -66,7 +66,7 @@
     },
     {
       "id": "cream-cheese",
-      "name": "cream cheese (light)",
+      "name": "cream cheese, light",
       "measure": {
         "type": "ounce",
         "value": 8
@@ -177,5 +177,8 @@
     }
   ],
 
-  "notes": ["For a great side dish add a bit of the filling to a can of corn, add some salsa or chopped chipotle peppers, then heat and serve."]
+  "notes": [
+    "For a great side dish add a bit of the filling to a can of corn, add some salsa or chopped chipotle peppers, then heat and serve.",
+    "For a meaty alternative, replace the broccoli with an equivalent amount of fajita-seasoned chicken breast."
+  ]
 }

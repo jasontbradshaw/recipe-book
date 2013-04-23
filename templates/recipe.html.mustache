@@ -26,7 +26,9 @@
         <li class="ingredient {{#optional}}optional{{/optional}}" data-id="{{id}}"
             data-measure-type="{{measure.type}}"
             data-measure-value="{{measure.value}}">
-          {{name}} <span class="measure"></span>
+            {{name}}
+            <span class="measure"></span>
+            <span class="optional">(optional)</span>
         </li>
         {{/ingredients}}
       </ul>
