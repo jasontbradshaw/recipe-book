@@ -33,7 +33,9 @@ html
   background-color $color-background
   width 100%
   height @width
+
   font-family $font-normal
+  font-size 18px
 
 .special
   color $color-special
@@ -43,6 +45,11 @@ html
   width $size-content-width
   margin-left auto
   margin-right @margin-left
+
+  // shrink font and use full width for printing
+  @media print
+    font-size 0.8em
+    width 100%
 
 #search
   // TODO: implement search
@@ -88,7 +95,6 @@ html
 
 .recipe
   padding 0.5em
-  font-size 18px
 
   .serves:after
     content ','
@@ -118,6 +124,7 @@ html
     float left
 
     h2
+      font-family $font-header
       margin-bottom 8px
       font-size 22px
 
@@ -144,6 +151,7 @@ html
     .measure
       float right
       color lighten($color-text, 65%)
+      font-size 0.8em
 
     .optional
       // hidden unless the ingredient is optional
