@@ -179,11 +179,22 @@ html
 
   .directions
     width 100% - $size-ingredients-width
-    padding-left 10px
+    padding-left 20px
 
   .direction
     text-align justify
     line-height 1.2em
 
-    &~ .direction
-      margin-top 1em
+    padding 0.5em
+    margin-left -(@padding)
+
+    border-radius 8px
+
+    transition-property background-color
+    transition-duration 250ms
+
+    &:first-of-type
+      margin-top -(@padding)
+
+    &:hover
+      background-color $color-highlight
