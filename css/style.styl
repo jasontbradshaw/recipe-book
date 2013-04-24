@@ -23,6 +23,10 @@ $size-ingredients-width = 35%
 *
   box-sizing border-box
 
+  // force all fonts to black when printing
+  @media print
+    color black !important
+
 // STYLES
 h1, h2, h3, h4, h5, h6
   font-family $font-normal
