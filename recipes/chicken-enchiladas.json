@@ -135,45 +135,45 @@
     {
       "parallelizable": true,
       "text": "Bring water to a boil, then add the corn. Once the corn is done, boil the broccoli in the same water. Once cooked, cut the corn off the cob and chop the broccoli.",
-      "ingredient-ids": ["corn", "broccoli"]
+      "ingredient_ids": ["corn", "broccoli"]
     },
     {
       "parallelizable": true,
       "text": "Chop the onion, then start sautèing them in a large pan with some olive oil over medium-high heat. This pan will eventually hold all the ingredients, so make sure the it's large enough!",
-      "ingredient-ids": ["olive-oil", "onion"]
+      "ingredient_ids": ["olive-oil", "onion"]
     },
     {
       "parallelizable": true,
       "text": "Rinse and drain the black beans.",
-      "ingredient-ids": ["beans"]
+      "ingredient_ids": ["beans"]
     },
     {
       "text": "Chop the jalepeño, the red and green bell peppers, and the garlic. De-seed the jalepeño unless you like your enchiladas spicy. Once the onions have had some time to sautè, add all the vegetables to the pan and sautè until tender.",
-      "ingredient-ids": ["jalepeno", "red-pepper", "green-pepper", "garlic"]
+      "ingredient_ids": ["jalepeno", "red-pepper", "green-pepper", "garlic"]
     },
     {
       "text": "Add the green chiles and let cook for a minute.",
-      "ingredient-ids": ["green-chiles"]
+      "ingredient_ids": ["green-chiles"]
     },
     {
       "text": "Add the cream cheese and stir until melted.",
-      "ingredient-ids": ["cream-cheese"]
+      "ingredient_ids": ["cream-cheese"]
     },
     {
       "text": "Add the broccoli, beans, and corn, stirring to combine and heat.",
-      "ingredient-ids": ["broccoli", "beans", "corn"]
+      "ingredient_ids": ["broccoli", "beans", "corn"]
     },
     {
       "text": "Grease an 8\" x 11\" baking dish. This will hold the enchiladas.",
-      "ingredient-ids": ["cooking-spray"]
+      "ingredient_ids": ["cooking-spray"]
     },
     {
       "text": "Fill the tortillas with the mixture, and line the pan with them. Don't be afraid to squash them together a bit to make them all fit! Once the pan is full, cover it in the Mexican-blend cheese, then pour the half-and-half over everything.",
-      "ingredient-ids": ["tortillas", "grated-cheese", "half-and-half"]
+      "ingredient_ids": ["tortillas", "grated-cheese", "half-and-half"]
     },
     {
       "text": "Bake at 350 degrees for 45 minutes. If you like softer cheese, cover the pan with foil. Leave it uncovered for a crispier top.",
-      "ingredient-ids": ["foil"]
+      "ingredient_ids": ["foil"]
     }
   ],
 
