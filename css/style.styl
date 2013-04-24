@@ -96,6 +96,10 @@ html
   header
     margin-bottom 20px
 
+  h1
+    font-size 50px
+    margin-bottom 10px
+
   .notes
     p
       text-align justify
@@ -105,10 +109,6 @@ html
         margin-top 1em
       &:last-child
         margin-bottom 1em
-
-  h1
-    font-size 50px
-    margin-bottom 10px
 
   .main
     clearfix()
@@ -123,20 +123,27 @@ html
 
   .ingredients
     width $size-ingredients-width
+
     ul
       list-style-type none
 
   .ingredient
-
-    transition-property background-color
-    transition-duration 150ms
+    clearfix()
 
     padding 0.3em
     margin-left -(@padding)
 
     border-radius 8px
-
     cursor pointer
+
+    transition-property background-color
+    transition-duration 150ms
+
+    line-height 1.2em
+
+    .measure
+      float right
+      color lighten($color-text, 65%)
 
     .optional
       // hidden unless the ingredient is optional

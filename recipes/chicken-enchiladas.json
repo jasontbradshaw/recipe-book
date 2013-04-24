@@ -53,7 +53,7 @@
       "id": "onion",
       "name": "yellow onion",
       "measure": {
-        "": "medium"
+        "value": 1
       }
     },
     {
@@ -74,7 +74,7 @@
     },
     {
       "id": "grated-cheese",
-      "name": "Mexican-blend cheese",
+      "name": "shredded cheese, Mexican-blend",
       "measure": {
         "type": "ounce",
         "value": 16
