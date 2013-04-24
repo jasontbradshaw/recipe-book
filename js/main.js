@@ -39,15 +39,16 @@ define([
     $recipe.delegate('.direction', 'mouseenter', function (event) {
       $ingredients.removeClass(selectedClass);
 
-      // get all the ingredients for this step
+      // build a list of all the ingredients selectors
       var ingredientIds = $(this).attr('data-ingredient-ids').split(',').slice(0, -1);
       var idSelectors = $.map(ingredientIds, function (id) {
         return '[data-id="' + id + '"]';
       });
-      console.log(idSelectors);
+
+      // highlight all the selected ingredients
       $ingredients.filter(idSelectors.join(',')).addClass(selectedClass);
     }).delegate('.direction', 'mouseleave', function () {
-      console.log('leave');
+      // un-highlight ingredients when we're done hovering
       $ingredients.removeClass(selectedClass);
     });
 
