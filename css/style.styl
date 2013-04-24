@@ -18,7 +18,10 @@ $font-fancy = 'Great Vibes', serif
 $font-normal = 'Open Sans', Helvetica, Arial, sans-serif
 
 $size-content-width = 720px
+$size-content-min-width = 320px
 $size-ingredients-width = 35%
+
+$media-thin = '(max-width: ' + ($size-content-width - 1) + ')'
 
 *
   box-sizing border-box
@@ -47,12 +50,18 @@ html
 
 #content
   width $size-content-width
+  min-width $size-content-min-width
+
   margin-left auto
   margin-right @margin-left
 
   // shrink font and use full width for printing
   @media print
     font-size 0.8em
+    width 100%
+
+  // take up the whole screen when it's narrow
+  @media $media-thin
     width 100%
 
 #search
@@ -135,6 +144,11 @@ html
   .ingredients
     width $size-ingredients-width
 
+    // don't share horizontal space when narrow
+    @media $media-thin
+      float none
+      width 100%
+
     ul
       list-style-type none
 
@@ -184,6 +198,15 @@ html
   .directions
     width 100% - $size-ingredients-width
     padding-left 20px
+
+    // don't share horizontal space when narrow
+    @media $media-thin
+      float none
+      width 100%
+
+      // remove padding since we're not next to the other section anymore
+      padding-left 0
+      margin-top 1em
 
   .direction
     text-align justify
