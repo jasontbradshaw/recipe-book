@@ -43,7 +43,8 @@ html{background-color:#f5f7f0;width:100%;height:100%;font-family:'Open Sans',Hel
 .recipe .ingredient .measure{float:right;color:#a6a6a6;font-size:.8em}
 .recipe .ingredient .optional{display:none;color:#a6a6a6;font-style:italic}
 .recipe .ingredient.optional .optional{display:inline}
-.recipe .ingredient:hover{background-color:#feedc6}
+.recipe .ingredient.selected,.recipe .ingredient:hover{background-color:#feedc6}
+.recipe .ingredient.selected + .selected{border-top-left-radius:0;border-top-right-radius:0;padding-top:1.3em;margin-top:-1em}
 .recipe .directions{width:65%;padding-left:10px}
 .recipe .direction{text-align:justify;line-height:1.2em;}
 .recipe .direction~ .direction{margin-top:1em}

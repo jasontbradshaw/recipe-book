@@ -33,6 +33,24 @@ define([
     }
     $time.text(hoursText + duration.minutes() + ' minutes');
 
+    // select ingredients involved in a step when that step is hovered
+    var $ingredients = $recipe.find('.ingredient');
+    var selectedClass = 'selected';
+    $recipe.delegate('.direction', 'mouseenter', function (event) {
+      $ingredients.removeClass(selectedClass);
+
+      // get all the ingredients for this step
+      var ingredientIds = $(this).attr('data-ingredient-ids').split(',').slice(0, -1);
+      var idSelectors = $.map(ingredientIds, function (id) {
+        return '[data-id="' + id + '"]';
+      });
+      console.log(idSelectors);
+      $ingredients.filter(idSelectors.join(',')).addClass(selectedClass);
+    }).delegate('.direction', 'mouseleave', function () {
+      console.log('leave');
+      $ingredients.removeClass(selectedClass);
+    });
+
     return $recipe;
   };
 

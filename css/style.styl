@@ -163,8 +163,19 @@ html
     &.optional .optional
       display inline
 
+    &.selected
     &:hover
       background-color $color-highlight
+
+    // join highlight backgrounds for adjacent selected elements
+    &.selected + .selected
+      border-top-left-radius 0
+      border-top-right-radius 0
+
+      // pull the top up under the previous selected sibling, to give the effect
+      // of removing the previous sibling's bottom border radius
+      padding-top @padding + 1em
+      margin-top -1em
 
   .directions
     width 100% - $size-ingredients-width
