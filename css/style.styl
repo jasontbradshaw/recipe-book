@@ -73,7 +73,7 @@ html
 
   h1
     font-family $font-fancy
-    font-size 120px
+    font-size 6.7em
     padding 0.1em
 
   header
@@ -83,7 +83,7 @@ html
     margin-left -(@width / 2)
 
   input
-    font-size 22px
+    font-size 1.2em
     font-family inherit
     text-align center
 
@@ -113,6 +113,30 @@ html
       background-color white
       outline none
 
+#results
+  width 100%
+  height @width
+
+  padding 0.5em
+
+.recipe-search-result
+  padding 0.5em
+  border-radius 8px
+  cursor pointer
+
+  transition-property background-color
+  transition-duration 150ms
+
+  h3
+    font-size 1.5em
+
+  .description
+    margin-top 0.3em
+    font-size 1em
+
+  &:hover
+    background-color $color-highlight
+
 .recipe
   padding 0.5em
 
@@ -130,7 +154,7 @@ html
     border-bottom 1px dashed $color-divider
 
   h1
-    font-size 50px
+    font-size 2.8em
     margin-bottom 10px
 
   .notes
@@ -155,7 +179,7 @@ html
     h2
       font-family $font-header
       margin-bottom 8px
-      font-size 22px
+      font-size 1.2em
 
   .ingredients
     width $size-ingredients-width
