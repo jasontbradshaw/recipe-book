@@ -70,4 +70,34 @@ define([
   // set up the search bar
   var $search = $('#search input');
   var loadingClass = 'loading';
+  var delay = 350;
+  var searchTimeout = null;
+
+  // update the search results with a new query
+  var getSearchResults = function (q) {
+    var results = $.map(search.index.search(q) || [], function (result) {
+      // get each recipe by its index
+      return recipes[parseInt(result.ref, 10)];
+    });
+
+    $search.removeClass(loadingClass);
+  };
+
+  $search.on('keydown keyup change', function (e) {
+    // mark that we're searching
+    $search.addClass(loadingClass);
+
+    // always reset the search timeout
+    clearTimeout(searchTimeout);
+    searchTimeout = null;
+
+    var query = $search.val();
+    if (e.keyCode === 13) {
+      // start searching immediately if return is pressed
+      defer(function () { getSearchResults(query); });
+    } else {
+      // start the timer to search for matching results
+      searchTimeout = setTimeout(function () { getSearchResults(query); }, delay);
+    }
+  });
 });

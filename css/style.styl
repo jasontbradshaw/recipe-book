@@ -97,17 +97,17 @@ html
     background-color rgba(white, 0.8)
     box-shadow 0 0 10px rgba(black, 0.3)
 
-    transition-property background-color, padding-left, padding-right
+    transition-property background-color
     transition-duration 250ms
+
+    // make room for the loading image
+    padding-right 40px
+    padding-left @padding-right
 
     &.loading
       background-image url('../img/search-loader.gif')
       background-repeat no-repeat
       background-position right 16px center
-
-      // make room for the loading image
-      padding-right 40px
-      padding-left @padding-right
 
     &:focus
       background-color white
