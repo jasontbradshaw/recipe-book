@@ -2,9 +2,15 @@ define([
   'jquery',
   'vendor/inflection',
   'moment',
+  'search',
   'recipes',
   'm!templates/recipe.html'
-], function ($, inflection, moment, recipes, tmplRecipe) {
+], function ($, inflection, moment, search, recipes, tmplRecipe) {
+
+  // defer a function call until the stack is clear
+  var defer = function (f) {
+    setTimeout(function () { f(); }, 0);
+  };
 
   // create a recipe jQuery DOM object, binding appropriate events
   var buildRecipe = function (recipe) {
@@ -55,5 +61,12 @@ define([
     return $recipe;
   };
 
+  // TODO: remove this
   $('#content').append(buildRecipe(recipes[0]));
+
+  // add the recipes to the search index (in the background after initial load)
+  $.each(recipes, function (i, recipe) {
+    // use the array index as the recipe's id so we can get it later
+    defer(function () { search.index.add(search.recipeToIndex(i, recipe)); });
+  });
 });
