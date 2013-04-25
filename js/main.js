@@ -61,9 +61,6 @@ define([
     return $recipe;
   };
 
-  // TODO: remove this
-  $('#content').append(buildRecipe(recipes[0]));
-
   // add the recipes to the search index (in the background after initial load)
   $.each(recipes, function (i, recipe) {
     // use the array index as the recipe's id so we can get it later
