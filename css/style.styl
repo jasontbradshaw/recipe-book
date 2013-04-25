@@ -172,8 +172,16 @@ html
 
     .measure
       float right
-      color lighten($color-text, 65%)
+
       font-size 0.8em
+      color lighten($color-text, 65%)
+
+      padding-left 0.4em
+      padding-right @padding-left
+      border-radius 2em
+
+      background-color white
+      background-color rgba(@background-color, 0.8)
 
     .optional
       // hidden unless the ingredient is optional

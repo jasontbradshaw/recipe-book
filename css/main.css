@@ -44,7 +44,7 @@ html{background-color:#f5f7f0;width:100%;height:100%;font-family:'Open Sans',Hel
 .recipe .ingredient{zoom:1;padding:.3em;margin-left:-.3em;-webkit-border-radius:8px;border-radius:8px;cursor:pointer;-webkit-transition-property:background-color;-moz-transition-property:background-color;-o-transition-property:background-color;-ms-transition-property:background-color;transition-property:background-color;-webkit-transition-duration:150ms;-moz-transition-duration:150ms;-o-transition-duration:150ms;-ms-transition-duration:150ms;transition-duration:150ms;line-height:1.2em;}
 .recipe .ingredient:before,.recipe .ingredient:after{content:"";display:table}
 .recipe .ingredient:after{clear:both}
-.recipe .ingredient .measure{float:right;color:#a6a6a6;font-size:.8em}
+.recipe .ingredient .measure{float:right;font-size:.8em;color:#a6a6a6;padding-left:.4em;padding-right:.4em;-webkit-border-radius:2em;border-radius:2em;background-color:#fff;background-color:rgba(255,255,255,0.8)}
 .recipe .ingredient .optional{display:none;color:#a6a6a6;font-style:italic}
 .recipe .ingredient.optional .optional{display:inline}
 .recipe .ingredient.selected,.recipe .ingredient:hover{background-color:#feedc6}
