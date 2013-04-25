@@ -66,4 +66,8 @@ define([
     // use the array index as the recipe's id so we can get it later
     defer(function () { search.index.add(search.recipeToIndex(i, recipe)); });
   });
+
+  // set up the search bar
+  var $search = $('#search input');
+  var loadingClass = 'loading';
 });
