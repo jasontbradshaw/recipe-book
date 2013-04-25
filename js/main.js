@@ -101,8 +101,10 @@ define([
   };
 
   // set up the search bar
-  var $search = $('#search input');
+  var $search = $('#search');
+  var $searchInput = $('#search input');
   var $results = $('#results');
+  var $viewer = $('#viewer');
 
   var loadingClass = 'loading';
   var delay = 350;
@@ -125,18 +127,18 @@ define([
     });
 
     // we're done loading results once the search has returned
-    $search.removeClass(loadingClass);
+    $searchInput.removeClass(loadingClass);
   };
 
-  $search.on('keydown keyup change', function (e) {
+  $searchInput.on('keydown keyup change', function (e) {
     // mark that we're searching
-    $search.addClass(loadingClass);
+    $searchInput.addClass(loadingClass);
 
     // always reset the search timeout
     clearTimeout(searchTimeout);
     searchTimeout = null;
 
-    var query = $search.val();
+    var query = $searchInput.val();
     if (e.keyCode === 13) {
       // start searching immediately if return is pressed
       defer(function () { processSearchResults(query); });
@@ -144,6 +146,18 @@ define([
       // start the timer to search for matching results
       searchTimeout = setTimeout(function () { processSearchResults(query); }, delay);
     }
+  });
+
+  // add a recipe to the result view
+  $results.delegate('.recipe-search-result', 'click', function (e) {
+    // create the full recipe inside the viewer
+    var id = parseInt($(this).attr('data-recipe-id'), 10);
+    var $recipe = buildRecipe(recipes[id]);
+
+    $search.hide();
+    $results.hide();
+
+    $viewer.empty().append($recipe);
   });
 
   // add the recipes to the search index (in the background after initial load)
