@@ -17,24 +17,26 @@ define(['jquery', 'vendor/lunr'], function ($, lunr) {
     // how we turn a recipe into an index
     recipeToIndex: function (id, recipe) {
       // return a new object with data from the recipe and the specified id
-      return {
+      var recipeDocument = {
         id: id,
 
         title: recipe.title || '',
         description: recipe.description || '',
 
-        ingredients: $.map(recipe.ingredients || [], function () {
-          return this.name + '\n';
-        }) || '',
+        ingredients: $.map(recipe.ingredients || [], function (ingredient) {
+          return ingredient.name;
+        }).join('\n'),
 
-        notes: $.map(recipe.notes || [], function () {
-          return this + '\n';
-        }) || '',
+        notes: $.map(recipe.notes || [], function (note) {
+          return note;
+        }).join('\n'),
 
-        directions: $.map(recipe.directions || [], function () {
-          return this.text + '\n';
-        }) || ''
+        directions: $.map(recipe.directions || [], function (step) {
+          return step.text;
+        }).join('\n')
       };
+
+      return recipeDocument;
     }
   };
 
